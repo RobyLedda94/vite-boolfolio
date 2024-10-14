@@ -14,7 +14,9 @@ export default {
     methods:{
         getProjects(){
             axios.get('http://127.0.0.1:8000/api/posts').then((response) => {
-                this.projects = response.data.results;
+                console.log(response.data.results);
+                // this.projects = response.data.results;
+                this.projects = response.data.results.data;
             }); 
         }
     }
