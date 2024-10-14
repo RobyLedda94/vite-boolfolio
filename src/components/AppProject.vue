@@ -20,9 +20,13 @@ export default {
     }
 }
 </script>
-<template lang="">
-    <div>
-        <h1>Prova</h1>
+<template>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center my-3">Prova</h1>
+            </div>
+        </div>
     </div>
 </template>
 
