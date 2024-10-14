@@ -30,7 +30,7 @@ export default {
                 <div class="row gy-2">
                     <div class="col-4" v-for="project in projects" :key="project.id">
                         <div class="card">
-                            <img :src="project.cover_image" class="card-img-top" alt="...">
+                            <img :src="project.cover_image.startsWith('http') ? project.cover_image : `http://127.0.0.1:8000/storage/${project.cover_image}` " class="card-img-top" alt="...">
                             <div class="card-body">
                               <h5 class="card-title">{{ project.title }}</h5>
                               <p class="card-text">{{ project.content }}</p>
