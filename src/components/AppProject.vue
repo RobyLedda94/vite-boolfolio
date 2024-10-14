@@ -21,6 +21,11 @@ export default {
                 this.projects = response.data.results.data;
                 this.last_page = response.data.results.last_page;
             }); 
+        },
+        goToPage(page){
+            axios.get('http://127.0.0.1:8000/api/posts', {params: {page: page}}).then((response) => {
+                this.projects = response.data.results.data;
+            });
         }
     }
 }
@@ -48,7 +53,7 @@ export default {
                 <nav aria-label="Page navigation example">
                     <ul class="pagination d-flex justify-content-center">
                       <li class="page-item"><a class="page-link" href="#">Precedente</a></li>
-                      <li class="page-item" v-for="n in last_page"><a class="page-link" href="#" >{{ n }}</a></li>
+                      <li class="page-item" v-for="n in last_page"><a class="page-link" href="#" @click="goToPage(n)">{{ n }}</a></li>
                       <li class="page-item"><a class="page-link" href="#">Successiva</a></li>
                     </ul>
                   </nav>
