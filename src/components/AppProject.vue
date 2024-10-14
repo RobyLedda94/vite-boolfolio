@@ -5,7 +5,9 @@ export default {
     name: 'AppProject',
     data(){
         return{
-            projects: []
+            projects: [],
+            first_page : 1,
+            last_page: null,
         }
     },
     created(){
@@ -17,6 +19,7 @@ export default {
                 console.log(response.data.results);
                 // this.projects = response.data.results;
                 this.projects = response.data.results.data;
+                this.last_page = response.data.results.last_page;
             }); 
         }
     }
@@ -44,9 +47,9 @@ export default {
             <div class="col-12 my-4">
                 <nav aria-label="Page navigation example">
                     <ul class="pagination d-flex justify-content-center">
-                      <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                      <li class="page-item"><a class="page-link" href="#">1</a></li>
-                      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                      <li class="page-item"><a class="page-link" href="#">Precedente</a></li>
+                      <li class="page-item" v-for="n in last_page"><a class="page-link" href="#" >{{ n }}</a></li>
+                      <li class="page-item"><a class="page-link" href="#">Successiva</a></li>
                     </ul>
                   </nav>
             </div>
