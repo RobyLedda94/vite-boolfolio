@@ -1,20 +1,19 @@
 <script>
 // importo la componenete app header
 import AppHeader from './components/AppHeader.vue';
-// importo la componenete 
-import PortFolio from './pages/PortFolio.vue';
+
 
 export default {
   // utilizzo la componenete
   components:{
-    AppHeader,
-    PortFolio
+    AppHeader
   }
 }
 </script>
 <template lang="">
   <div>
     <AppHeader />
+    <router-view></router-view>
     
   </div>
 </template>
