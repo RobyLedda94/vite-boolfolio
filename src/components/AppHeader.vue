@@ -1,6 +1,9 @@
 <script>
 export default {
-  name: 'AppHeader'
+//   name: 'AppHeader'
+props: {
+    menu: Array
+}
 }
 </script>
 
@@ -10,11 +13,9 @@ export default {
       <div class="row">
         <div class="col-12">
           <ul class="list-unstyled d-flex justify-content-start m-0">
-            <li class="mx-3">
-              <router-link to="/">HOME</router-link>
-            </li>
-            <li class="mx-3">
-              <router-link to="/portfolio">POSTS</router-link>
+            <li class="mx-3" v-for="item, index in menu" :key="index">
+              <!-- <router-link to="/">HOME</router-link> -->
+               <a href="#">{{ item.label }}</a>
             </li>
           </ul>
         </div>
