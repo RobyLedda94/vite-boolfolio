@@ -2,20 +2,20 @@
 // importo la componenete app header
 import AppHeader from './components/AppHeader.vue';
 // importo la componenete 
-import AppProject from './components/AppProject.vue';
+import PortFolio from './pages/PortFolio.vue';
 
 export default {
   // utilizzo la componenete
   components:{
     AppHeader,
-    AppProject
+    PortFolio
   }
 }
 </script>
 <template lang="">
   <div>
     <AppHeader />
-    <AppProject />
+    
   </div>
 </template>
 
