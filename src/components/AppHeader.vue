@@ -15,7 +15,7 @@ props: {
           <ul class="list-unstyled d-flex justify-content-start m-0">
             <li class="mx-3" v-for="item, index in menu" :key="index">
               <!-- <router-link to="/">HOME</router-link> -->
-               <a href="#">{{ item.label }}</a>
+               <router-link :to="{name: item.name}">{{ item.label }}</router-link>
             </li>
           </ul>
         </div>
