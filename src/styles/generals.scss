@@ -1,8 +1,12 @@
 // importo bootstrap
 @import "../node_modules/bootstrap/scss/bootstrap";
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+header {
+    background-color: rgb(49, 109, 109);
+
+    a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 500;
+    }
 }

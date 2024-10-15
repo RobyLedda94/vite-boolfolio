@@ -8,7 +8,7 @@ export default {
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
-                    <ul class="list-unstyled d-flex justify-content-start">
+                    <ul class="list-unstyled d-flex justify-content-start m-0">
                         <li class="mx-3">
                             <a href="#">HOME</a>
                         </li>
