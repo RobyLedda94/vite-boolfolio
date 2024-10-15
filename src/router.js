@@ -10,6 +10,12 @@ const router = createRouter({
             path: '/',
             name: 'homepage',
             component: Homepage
+        },
+        {
+            path: '/portfolio',
+            name: 'portfolio',
+            component: PortFolio
+
         }
     ]
 })
