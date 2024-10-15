@@ -5,10 +5,14 @@ export default {
 </script>
 
 <template>
-    <div>
-      <h1>Benvenuti nella Homepage</h1>
+    <div class="container my-4">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center">Benvenuti nella Homepage</h1>
+            </div>
+        </div>
     </div>
-  </template>
+</template>
   
 
   
