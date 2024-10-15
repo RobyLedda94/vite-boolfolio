@@ -4,7 +4,7 @@ export default {
 }
 </script>
 <template>
-    <header>
+    <header class="py-3">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
