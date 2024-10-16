@@ -15,6 +15,11 @@ const router = createRouter({
             path: '/portfolio',
             name: 'portfolio',
             component: PortFolio
+        },
+        {
+            path: '/post/:slug', // rotta per il post
+            name: 'post-detail',
+            component: PostDetail
         }
     ]
 })
