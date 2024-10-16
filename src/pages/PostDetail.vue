@@ -36,6 +36,28 @@ export default {
                     <img class="img-fluid rounded"  :src="post.cover_image.startsWith('http') ? post.cover_image : `http://127.0.0.1:8000/storage/${post.cover_image}`"  alt="Post Cover">
                 </div>
             </div>
+            <div class="col-12">
+                <div class="my-4">
+                    <h4>Contenuto:</h4>
+                    <p>{{ post.content }}</p>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="my-4">
+                    <h4 class="font-weight-bold">Tecnologie utilizzate:</h4>
+                    <ul class="list-unstyled">
+                        <li v-for="tech in post.technologies" :key="tech.id">
+                            {{ tech.name }}
+                        </li>
+                    </ul>
+                </div>
+            </div>            
+            <!-- <div class="col-12">
+                <div class="my-4">
+                    <h4 class="font-weight-bold">Tipologia:</h4>
+                    <span>{{ post.type.name }}</span>
+                </div>
+            </div> -->
         </div>
     </div>
 </template>
@@ -44,3 +66,10 @@ export default {
 
 
 </style>
+
+
+
+
+
+
+
