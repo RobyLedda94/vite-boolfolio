@@ -28,8 +28,15 @@ export default {
 </script>
 
 <template>
-    <div>
-        <h1>prova</h1>
+    <div class="container my-3">
+        <div class="row">
+            <div class="col-12">
+                <div class="text-center">
+                    <h1 class="text-center mb-3">{{ post.title }}</h1>
+                    <img class="img-fluid rounded"  :src="post.cover_image.startsWith('http') ? post.cover_image : `http://127.0.0.1:8000/storage/${post.cover_image}`"  alt="Post Cover">
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
