@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 
 import Homepage from "./pages/Homepage.vue";
 import PortFolio from "./pages/PortFolio.vue";
+import PostDetail from "./pages/PostDetail.vue";
 
 const router = createRouter({
     history: createWebHistory(),
