@@ -44,6 +44,7 @@ export default {
                             <div class="card-body">
                               <h5 class="card-title">{{ project.title }}</h5>
                               <p class="card-text">{{ project.content.substr(0, 150) + '...' }}</p>
+                              <router-link :to="{ name: 'post-detail', params: { slug: project.slug } }" class="btn btn-primary">Leggi di più</router-link>
                             </div>
                           </div>
                     </div>
