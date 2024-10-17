@@ -1,6 +1,9 @@
 <script>
+import ContactForm from '../components/ContactForm.vue';
 export default {
-    
+    components: {
+        ContactForm
+    }
 }
 </script>
 <template>
@@ -18,7 +21,7 @@ export default {
                 </div>
             </div>
             <div class="col-12">
-
+                <ContactForm />
             </div>
         </div>
     </div>

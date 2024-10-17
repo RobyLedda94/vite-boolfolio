@@ -1,5 +1,6 @@
 <script>
 import { store } from '../store.js';
+import axios from 'axios';
 export default {
     data(){
         return{
@@ -18,13 +19,17 @@ export default {
                 email: this.email,
                 contact: this.contact,
             }
+
+            axios.post('http://127.0.0.1:8000/contacts', data).then((res) => {
+                console.log(res);
+            });
         }
     }
 }
 </script>
 <template>
     <div>
-        <form method="post" @submit="sendForm()">
+        <form method="post" @submit.prevent="sendForm()">
             <div class="row gy-2">
                 <div class="col-6">
                     <label class="control-label">Nome</label>
